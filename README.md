@@ -12,3 +12,6 @@ This project contains scrapers for pending murder cases from Indian courts' webs
 - Therefore, each folder contains files of every district-level court in the district that folder is named after.
 - The subfolder named *JOINED_FILES* contains consolidated data of all disitrict-level courts in that district.
 - You are free to either used the original files or use the consolidated files.
+
+### Inside *Cleaning and analysis* folder:
+- Jupyter notebook containing data cleaning and analysis for class project.
