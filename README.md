@@ -15,3 +15,7 @@ This project contains scrapers for pending murder cases from Indian courts' webs
 
 ### Inside *Cleaning and analysis* folder:
 - Jupyter notebook containing data cleaning and analysis for class project.
+
+### Inside *map_stuff* zip file:
+- This contains a javascript file that is home to mapping coordinates (in form of geojson), formatting, and corresponding data for five selected districts.
+- It also has a html page that shows the mapped version of the data.
