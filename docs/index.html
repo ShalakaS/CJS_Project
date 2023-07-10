@@ -8,24 +8,11 @@
 	<link rel="icon" href="gavel.jpg">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- 
-THESE ARE CALLS TO DIFFERENT EXTERNAL FILES
-MAPBOX HAS A JAVASCRIPT LIBRARY THAT YOU NEED
-THE NEXT IS A CSS FILE FOR THE MAP
-AND THE FINAL ONE IS THE LIBRARY FOR JQUERY, WHICH I USE FOR THE PULLDOWN MENU.
- -->
-
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
 <script src='https://api.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<!-- 
-THESE ARE CSS STYLES WHAT YOU SHOULD FREELY PLAY WITH
-THE STYLES THAT BEGIN WITH # RELATE TO IDS, 
-THE ONES THAT BEGIN WITH . RELATE TO CLASSES
-WHEN YOU GOT EVERYTHING WORKING YOU CAN PLAY WITH THESE AND ADD TO THESE 
-TO MAKE YOUR FONTS AND LAYOUTS NICE AND LOVELY
- -->
+	
 
 	<style>
 		::-webkit-scrollbar {
@@ -131,13 +118,6 @@ TO MAKE YOUR FONTS AND LAYOUTS NICE AND LOVELY
 
 <body>
 
-	<!-- 
-THE DIVS BELOW ARE SUPER IMPORTANT:
-THEY ARE WHERE THE MAP WILL GO, AND YOUR ARTICLE TEXT WILL GO
-YOU WILL CERTAINLY WANT TO STYLE THESE, BOTH THEIR PLACEMENT AND CONTENT 
-THE MAP SHOULD BE EMPTY.
-WHATEVER INTRODUCTORY TEXT YOU WANT CAN GO INTO THE ARTICLEPLACE DIV
- -->
 
 
 	<div id='map'>
@@ -146,12 +126,7 @@ WHATEVER INTRODUCTORY TEXT YOU WANT CAN GO INTO THE ARTICLEPLACE DIV
 				<option value="">All Groups</option>
 			</select>
 		</div>
-		<div id='color-scale'>
-			<p>Rating</p>
-			<div><span style='background-color: #e6ebec'></span>1</div>
-			<div><span style='background-color: #4a74ab'></span>5</div>
-			<div><span style='background-color: #1c9099'></span>10</div>
-		</div>
+		
 
 	</div>
 	<div id='articlePlace'> 
@@ -205,46 +180,15 @@ WHATEVER INTRODUCTORY TEXT YOU WANT CAN GO INTO THE ARTICLEPLACE DIV
 
 		<li>A court in Beed has held regular hearings for the case since 2018 and will next be heard on December 27, 2022</li>
 	</div>
-	<!-- 
-INSIDE THE MAP DIV  ARE TWO THINGS, THE DROP-DOWN MENU AND THE RATING LEGEND
-
-
-DROP-DOWN MENU: THE ID select–menu IS USED BY THE JQUERY FUNCTION WAY DOWN AT THE BOTTOM
-THIS HTML SETS UP THE PULLDOWN MENU
-IF YOU HAVE MULTIPLE GROUPS THE JQUERY AT THE BOTTOM 
-WILL UPDATE THE SELECT MENU FOR YOU
-
-RATING: THIS IS A NEW INNOVATION BY SOMA. I WILL GO OVER IT NEXT WEEK, 
-IT SHOULD BE THE LAST THING YOU DEAL WITH. 
-IT IS THERE FOR YOU TO USE THE NEW 'RATING' PROPERTY
-TO AUTOMATICALLY SET A COLOR RANGE. 
-IT IS NOT WORKING IN THIS EXAMPLE.
- -->
-
-	<!-- 
-THIS IS WHERE THE BROWSER LOADS IN YOUR GEOJSON INFORMATION
-MAKING IT A JAVASCRIPT FILE .js, RATHER THAN A GEOJSON FILE
-ALLOWS YOU TO LOAD IT LOCALLY WITHOUT DEALING WITH SETTING UP SERVERS ON YOUR MACHINE.
- -->
+	
 
 	<script type="text/javascript" src="geo-data12-6.js"></script>
 
-	<!-- 
-HERE BEGINS ALL THE SCRIPT THAT SETS UP THE MAP 
-ALL THE COMMENTS FROM HERE WE'LL BE IN JAVASCRIPT COMMENTS //
- -->
 
 	<script type="text/javascript">
-// these seven lines maybe the only lines you need to edit
-// you should put in your own access token
-// you can change the style of the tiles
-// as well as the center and the zoom
 
-// but note that way down below this is a method that auto centers and zooms:
-// map.fitBounds(turf.bbox(infoData), { padding: 120, linear: true })
-//If you want to control the centering and zoom yourself, comment out that line.
 
-		mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+		mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhbGFrYXMiLCJhIjoiY2xibjRqczI3MG5xNDNvcXhzeG44YjBrdiJ9.ZDUDYytU-zKkPE5WsExqvA';
 
 		var map = new mapboxgl.Map({
 			container: 'map', // HTML container ID
